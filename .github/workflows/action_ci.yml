@@ -1,14 +1,30 @@
+<<<<<<< HEAD
 name: Test Multiple Python Versions
 
 on: [push]
+=======
+name: ML Pipeline CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+>>>>>>> 7897a15 (Fix CI: update requirements, clean repo structure)
 
 jobs:
   build:
     runs-on: ubuntu-latest
+<<<<<<< HEAD
 
     strategy:
       matrix:
         python-version: ["3.9", "3.10", "3.11"]
+=======
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+>>>>>>> 7897a15 (Fix CI: update requirements, clean repo structure)
 
     steps:
       - uses: actions/checkout@v4
@@ -27,5 +43,10 @@ jobs:
       - name: Test with pytest
         run: make test
 
+<<<<<<< HEAD
       - name: Format code with Python Black
         run: make format
+=======
+      - name: Format check with Black
+        run: make format-check
+>>>>>>> 7897a15 (Fix CI: update requirements, clean repo structure)

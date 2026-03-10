@@ -14,6 +14,7 @@ format:
 format-check:
 	black --check ml/*.py tests/*.py
 
+<<<<<<< HEAD
 # --- ML Pipeline Stages ---
 preprocess:
 	python ml/preprocess.py
@@ -36,3 +37,6 @@ clean:
 	rm -f data/preprocessing_metadata.json models/*.json models/predict.py
 
 all: install lint test
+=======
+all: install lint test
+>>>>>>> 7897a15 (Fix CI: update requirements, clean repo structure)
